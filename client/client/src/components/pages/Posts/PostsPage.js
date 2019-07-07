@@ -1,7 +1,7 @@
 import React from 'react';
 import PageTitle from '../../common/PageTitle/PageTitle';
 import Posts from '../../features/Posts/PostsContainer';
-import PostCounter from '../../features/PostsCounter/PostsCounter';
+import PostCounter from '../../features/PostsCounter/PostsCounterContainer';
 
 const PostsPage = () => (
     <div>
