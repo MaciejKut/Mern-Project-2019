@@ -1,0 +1,1 @@
+To install clone repo and type yarn install
