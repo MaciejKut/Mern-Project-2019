@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { API_URL } from '../config';
 
 /* SELECTORS */
 export const getPosts = ({ posts }) => posts;
@@ -30,14 +31,14 @@ export default function reducer(statePart = initialState, action = {}) {
 /* THUNKS */
 
 export const loadPostRequest = () => {
-    return dispatch => {
-
-        axios.get('http://localhost:8000/api/posts').then(res => {
+    return async dispatch => {
+        try {
+            let res = await axios.get(`${API_URL}/posts`);
             dispatch(loadPosts(res.data));
-        })
-            .catch(err => {
-                console.log(err.message);
-            });
+        } catch (e) {
+            console.log(e.message);
+        }
+
     };
 };
 
