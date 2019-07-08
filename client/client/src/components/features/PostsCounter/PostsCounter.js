@@ -7,11 +7,14 @@ class PostsCounter extends React.Component {
 
     }
     render() {
-        const { posts } = this.props;
+        const { numberOfPosts } = this.props;
 
         return (
             <div>
-                {posts.length > 0 ? 'No of posts ' + posts.length : 'No posts'}
+                <h3>
+                    {numberOfPosts > 0 ? 'No of posts ' + numberOfPosts : 'No posts'}
+                </h3>
+
             </div>
         );
     }

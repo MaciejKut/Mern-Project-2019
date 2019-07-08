@@ -1,10 +1,11 @@
 // tutaj wykorzystujemy reducer połącznenie komponentu z Reduxem
 import { connect } from 'react-redux';
-import { getPosts, loadPostRequest } from '../../../redux/postsRedux';
+import { getPosts, getRequest, loadPostRequest } from '../../../redux/postsRedux';
 import Posts from './Posts';
 
 const mapStateToProps = state => ({
     posts: getPosts(state),
+    request: getRequest(state),
 })
 
 const mapDispatchToProps = dispatch => ({
